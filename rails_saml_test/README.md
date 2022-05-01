@@ -31,19 +31,20 @@ docker-compose down --rmi all --volumes --remove-orphans
 
 ## example
 
-https://github.com/onelogin/ruby-saml-example/
-https://github.com/mmts1007/saml-memo
-https://github.com/onelogin/ruby-saml
+https://github.com/onelogin/ruby-saml-example/<br>
+https://github.com/mmts1007/saml-memo<br>
+https://github.com/onelogin/ruby-saml<br>
 
 ## 参考
 
-https://mmts1007.hatenablog.jp/entry/2017/02/05/161926
-https://zenn.dev/hukurouo/articles/rails-saml-sso
-https://qiita.com/gotchane/items/a3b6ed52afc57c92971e
+https://mmts1007.hatenablog.jp/entry/2017/02/05/161926<br>
+https://zenn.dev/hukurouo/articles/rails-saml-sso<br>
+https://qiita.com/gotchane/items/a3b6ed52afc57c92971e<br>
 
-## 証明書作成
+## SP 証明書作成
 
 ```
+cd config/saml/sp
 openssl genrsa -out private.pem 2048
 openssl req -new -key private.pem -out cacert.csr
 openssl x509 -days 3650 -in cacert.csr -req -signkey private.pem -out sp.cert
