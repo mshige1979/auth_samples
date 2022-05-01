@@ -43,4 +43,4 @@ log
 !.env.samples
 
 # 証明書の場所
-config/saml
+!config/saml/.gitkeep
